@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nodejs
-PKG_VERSION:=0.10.25
+PKG_VERSION:=4.1.0
 PKG_RELEASE:=0
 
 PKG_SOURCE:=node-v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nodejs.org/dist/v$(PKG_VERSION)/
-PKG_MD5SUM:=153bdbf77b4473df2600b8ce123ef331
+PKG_MD5SUM:=453005f64ee529f7dcf1237eb27ee2fa2415c49f5c9e7463e8b71fba61c5b408
 
 PKG_BUILD_DEPENDS:=nodejs/host
 
@@ -25,13 +25,13 @@ include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/nodejs
-  SUBMENU:=Node.js
+  SUBMENU:=Node.js 4
   SECTION:=net
   CATEGORY:=Network
   TITLE:=Node.js Evented I/O for V8 JavaScript
   URL:=http://nodejs.org
   MAINTAINER:=Xin Ouyang <xinpascal@gmail.com>
-  DEPENDS:=@armeb||@arm||@i386 +libstdcpp +libpthread +librt +libopenssl
+  DEPENDS:=+libstdcpp +libpthread +librt +libopenssl
 endef
 
 define Package/nodejs/description
@@ -43,13 +43,13 @@ define Package/nodejs/description
 endef
 
 define Package/nodejs-npm
-  SUBMENU:=Node.js
+  SUBMENU:=Node.js 4
   SECTION:=net
   CATEGORY:=Network
   TITLE:=Node Package Manager
   URL:=https://npmjs.org
   MAINTAINER:=Xin Ouyang <xinpascal@gmail.com>
-  DEPENDS:=@armeb||@arm||@i386 +libstdcpp +libpthread +librt +libopenssl
+  DEPENDS:=+libstdcpp +libpthread +librt +libopenssl
 endef
 
 define Package/nodejs-npm/description
