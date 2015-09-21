@@ -25,10 +25,10 @@ include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/nodejs
-  SUBMENU:=Node.js 4
-  SECTION:=net
-  CATEGORY:=Network
-  TITLE:=Node.js Evented I/O for V8 JavaScript
+  SUBMENU:=Nodejs 4
+  SECTION:=lang
+  CATEGORY:=Languages
+  TITLE:=Nodejs Evented I/O for V8 JavaScript
   URL:=http://nodejs.org
   MAINTAINER:=Xin Ouyang <xinpascal@gmail.com>
   DEPENDS:=+libstdcpp +libpthread +librt +libopenssl
@@ -43,9 +43,9 @@ define Package/nodejs/description
 endef
 
 define Package/nodejs-npm
-  SUBMENU:=Node.js 4
-  SECTION:=net
-  CATEGORY:=Network
+  SUBMENU:=Nodejs 4
+  SECTION:=lang
+  CATEGORY:=Languages
   TITLE:=Node Package Manager
   URL:=https://npmjs.org
   MAINTAINER:=Xin Ouyang <xinpascal@gmail.com>
