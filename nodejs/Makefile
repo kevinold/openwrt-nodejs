@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nodejs
-PKG_VERSION:=4.1.0
+PKG_VERSION:=0.12.7
 PKG_RELEASE:=0
 
 PKG_SOURCE:=node-v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nodejs.org/dist/v$(PKG_VERSION)/
-PKG_MD5SUM:=769773c26e64323f4bc862072c806a30
+PKG_MD5SUM:=5523ec4347d7fe6b0f6dda1d1c7799d5
 
 PKG_BUILD_DEPENDS:=nodejs/host
 
@@ -25,7 +25,7 @@ include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/nodejs
-  SUBMENU:=Nodejs 4
+  SUBMENU:=Nodejs
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=Nodejs Evented I/O for V8 JavaScript
@@ -43,7 +43,7 @@ define Package/nodejs/description
 endef
 
 define Package/nodejs-npm
-  SUBMENU:=Nodejs 4
+  SUBMENU:=Nodejs
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=Node Package Manager
